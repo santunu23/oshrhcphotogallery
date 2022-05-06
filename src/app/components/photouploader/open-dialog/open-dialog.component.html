@@ -1,0 +1,61 @@
+<div class="container">
+    <ngx-spinner
+    bdColor="rgba(51,51,51,0.8)"
+    size="medium"
+    color="#fff"
+    type="ball-scale-multiple"
+  >
+    <p style="font-size: 20px; color: white">Please Wait...</p>
+  </ngx-spinner>
+    <div class="row justify-content-center">
+      <div style="width: 80%;">
+        <h1 mat-dialog-title>{{this.headername}} Photo  Form</h1>
+        <div mat-dialog-content>
+           <form [formGroup]="photogalleryForm">  
+               <mat-form-field appearance="outline">
+                   <mat-label>Photo Category</mat-label>
+                   <mat-select  formControlName="category" placeholder="Photo Category">
+                        <mat-option value="dl">Digital Learning</mat-option>
+                        <mat-option value="ureport">U-reporting</mat-option>
+                        <mat-option value="asrh">ASRH session with adolescent’s</mat-option>
+                        <mat-option value="siw">Social Innovation workshop</mat-option>
+                        <mat-option value="cbcpc">Community based child protection comity(CBCPC)</mat-option>
+                        <mat-option value="idesw">Intergenerational Dialogue and Experience Sharing Workshop</mat-option>
+                        <mat-option value="lt">Leadership Training</mat-option>
+                        <mat-option value="sca">Social Change Agents</mat-option>
+                        <mat-option value="pss">Psychosocial support to adolescents</mat-option>
+                        <mat-option value="sda">Storytelling Drama and Art</mat-option>
+                        <mat-option value="tdpb">Theatre/Drama for Peace Building</mat-option>
+                        <mat-option value="pct">Parental care tips</mat-option>
+                        <mat-option value="cym">Court yard meeting</mat-option>
+                        <mat-option value="ca">Club activity</mat-option>
+                        <mat-option value="scswa">Social Cohesion session with adolescent’s</mat-option>
+                        <mat-option value="cc">Creative competition</mat-option>
+                        <mat-option value="cd">Day observance</mat-option>
+                        <mat-option value="vp">Visitor pictures</mat-option>
+                   </mat-select>
+                 </mat-form-field>
+            <mat-form-field appearance="outline">
+               <mat-label>Description</mat-label>
+               <input   formControlName="description" matInput type="text"> 
+             </mat-form-field>
+              <input
+              type="file"
+              #fileInput
+               id="uploadFile"
+              (change)="upload($event)"
+              name="uploadFile"
+              multiple="multiple"
+              accept=".png,.jpg"
+               />
+             </form>
+           </div>
+           <div mat-dialog-actions [align]="'end'">
+            <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+            <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addphoto()" >{{this.buttonname}}</button>
+           </div>
+      </div>
+
+
+    </div>
+</div>

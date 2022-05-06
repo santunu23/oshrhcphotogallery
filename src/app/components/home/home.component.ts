@@ -16,6 +16,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
   details(itemname:string){
+    if(this.cookieservice.get('activityname')){
+      this.cookieservice.delete('activityname');
+    }
     this.cookieservice.set('activityname',itemname);
     this.router.navigateByUrl('homedetails');
 
