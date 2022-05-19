@@ -1,4 +1,3 @@
-import { TeststreamloadComponent } from './teststreamload/teststreamload.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PhotouploaderComponent } from './components/photouploader/photouploader.component';
@@ -9,8 +8,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'stream', pathMatch: 'full' },
   {path:'home',component:HomeComponent},
   {path:'homedetails',component:HomedetailsComponent},
-  {path:'photouploader',component:PhotouploaderComponent},
-  {path:'stream',component:TeststreamloadComponent}
+  {path:'photouploader',component:PhotouploaderComponent}
 ];
 
 @NgModule({

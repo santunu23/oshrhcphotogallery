@@ -35,7 +35,6 @@ import { GalleryModule } from  'ng-gallery';
 import { LightGallery } from 'lightgallery/lightgallery';
 import { LightgalleryModule } from 'lightgallery/angular';
 import { HeaderComponent } from './components/header/header.component';
-import { TeststreamloadComponent } from './teststreamload/teststreamload.component';
 
 @NgModule({
   declarations: [
@@ -44,8 +43,7 @@ import { TeststreamloadComponent } from './teststreamload/teststreamload.compone
     OpenDialogComponent,
     HomeComponent,
     HomedetailsComponent,
-    HeaderComponent,
-    TeststreamloadComponent,
+    HeaderComponent
 
   ],
   imports: [
