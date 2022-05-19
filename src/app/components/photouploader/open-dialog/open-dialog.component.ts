@@ -35,13 +35,16 @@ export class OpenDialogComponent implements OnInit {
     this.photogalleryForm=this.formBuilder.group({
       category : [' ',Validators.required],
       description: [' ',Validators.required],
+      socialhubname: [' ',Validators.required],
     });
     if(this.editData){
+      console.log(this.editData);
       this.buttonname="Update";
       this.headername="Edit"
       this.photogalleryForm.controls['category'].setValue(this.editData.category);
       this.photogalleryForm.controls['description'].setValue(this.editData.description);
-       
+      this.photogalleryForm.controls['socialhubname'].disable();
+      
       }
 
   }

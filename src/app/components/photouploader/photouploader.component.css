@@ -10,3 +10,7 @@ table {
   td, th {
     width: 25%;
   }
+  .matColumnDef{
+    text-align: center;
+    margin:2px;
+  }

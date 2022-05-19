@@ -2,7 +2,7 @@
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,7 +34,8 @@ import { HomedetailsComponent } from './components/homedetails/homedetails.compo
 import { GalleryModule } from  'ng-gallery';
 import { LightGallery } from 'lightgallery/lightgallery';
 import { LightgalleryModule } from 'lightgallery/angular';
-import { TestpictureComponent } from './components/testpicture/testpicture.component';
+import { HeaderComponent } from './components/header/header.component';
+import { TeststreamloadComponent } from './teststreamload/teststreamload.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { TestpictureComponent } from './components/testpicture/testpicture.compo
     OpenDialogComponent,
     HomeComponent,
     HomedetailsComponent,
-    TestpictureComponent,
+    HeaderComponent,
+    TeststreamloadComponent,
 
   ],
   imports: [
@@ -71,9 +73,10 @@ import { TestpictureComponent } from './components/testpicture/testpicture.compo
     HttpClientModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    CommonModule
   ],
-  providers: [CookieService],
+  providers: [CookieService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

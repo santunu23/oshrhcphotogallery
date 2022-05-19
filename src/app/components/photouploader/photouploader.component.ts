@@ -51,7 +51,6 @@ export class PhotouploaderComponent implements OnInit {
       this.service.getData().subscribe({
         next:(res)=>{
           this.users$=res.map((e:any)=>{
-            console.log(e.payload.doc.data()['date'])
             return{
               photoId: e.payload.doc['id'],
               randomId:e.payload.doc.data()['randomId'],

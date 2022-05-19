@@ -38,6 +38,7 @@ export class FirebaseService {
     return this.db.collection('/oshrhcphotogallery').add({
      description:data.description,
      category:data.category,
+     socialhubname:data.socialhubname,
      imgURL:imgurl,
      randomId:randomID,
      createdate:formatAMPM(new Date)[0],

@@ -1,3 +1,35 @@
+// import { FirebaseService } from 'src/app/service/firebase.service';
+// import { Component, OnInit } from '@angular/core';
+// import { GalleryItem,ImageItem } from 'ng-gallery';
+// import { Observable,map } from 'rxjs';
+// import { AngularFirestore} from '@angular/fire/firestore';
+// @Component({
+//   selector: 'app-teststreamload',
+//   templateUrl: './teststreamload.component.html',
+//   styleUrls: ['./teststreamload.component.css']
+// })
+// export class TeststreamloadComponent implements OnInit {
+//   image$:Observable<GalleryItem[]>
+//   constructor(private service:FirebaseService,
+//     private db:AngularFirestore) { }
+
+//   ngOnInit(): void {
+//   //  this.image$=this.service.getSelecteddata('dl').subscribe(res=>res.map((e:any)=>{
+//   //    src:e.payload.doc.data()['description']
+//   //   }) );
+//    this.image$=this.db.collection('oshrhcphotogallery',ref=>ref.where('category','==','db')).snapshotChanges();
+//    this.image$.pipe(map(
+//      res=> console.log(res)
+//      //>new ImageItem({src:res.imgURL})
+   
+   
+//    ))
+//   console.log(this.image$);
+//    //.pipe(map(res=> new ImageItem({ src:res.imgURL,thumb:res.imgURL})))
+//   }
+
+// }
+
 import { NgxSpinnerService } from 'ngx-spinner';
 import { CookieService } from 'ngx-cookie-service';
 import { Component, OnInit,Input } from '@angular/core';
@@ -17,12 +49,11 @@ import { thumbnailsSettings } from 'lightgallery/plugins/thumbnail/lg-thumbnail-
     imgURL:string,
   }
 @Component({
-  selector: 'app-homedetails',
-  templateUrl: './homedetails.component.html',
-  template:`<app-home [messageEvent]="receiveMessage[$event]"></app-home>`,
-  styleUrls: ['./homedetails.component.css']
+  selector: 'app-teststreamload',
+  templateUrl: './teststreamload.component.html',
+  styleUrls: ['./teststreamload.component.css']
 })
-export class HomedetailsComponent implements OnInit {
+export class TeststreamloadComponent implements OnInit {
 users$: any[] = [];  
 id:string;
 category:string;
@@ -40,28 +71,25 @@ constructor(
     private spinner:NgxSpinnerService) { }
 
     ngOnInit(): void {
-        let activityname=this.cookieservice.get('activityname');
+        //let activityname=this.cookieservice.get('activityname');
+        let activityname='dl';
         this.spinner.show();
         if(!this.cookieservice.get('activityname')){
           this.router.navigateByUrl('home');
         }else{
           const galleryRef: GalleryRef = this.gallery.ref(this.galleryId);
           this.service.getSelecteddata(activityname).subscribe(res=>{
-          res.map((e:any)=>{  
-            console.log(e.payload.doc.data());
-            // this.spinner.hide();
-            //  galleryRef.addImage({
-            //   src: e.payload.doc.data()['imgURL'],
-            //   thumb: e.payload.doc.data()['imgURL'],
-            //   title: e.payload.doc.data()['description'],
-            // });
-
+          this.users$=res.map((e:any)=>{
+           galleryRef.addImage({
+              src: e.payload.doc.data()['imgURL'],
+              thumb: e.imgURL,
+              title: e.payload.doc.data()['description'],
+            });
           //  return {
           //   description:e.payload.doc.data()['description'],
           //   imgURL:e.payload.doc.data()['imgURL']
           //  }
-         }
-         );
+         });
           // this.users$.forEach(e=>{
           //   this.spinner.hide();
           //   galleryRef.addImage({
@@ -81,3 +109,4 @@ constructor(
       this.router.navigateByUrl('home');
     }
 }
+

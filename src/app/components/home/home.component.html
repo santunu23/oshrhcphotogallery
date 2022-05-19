@@ -1,10 +1,20 @@
+<app-header></app-header>
 <div class="container-fluid contenedor text-center">
-    <h1 class="text-center">OSHRHC Activity Photos.</h1>
+   <ngx-spinner
+   bdColor="rgba(51,51,51,0.8)"
+   size="medium"
+   color="#fff"
+   type="ball-scale-multiple"
+ >
+   <p style="font-size: 20px; color: white">Please Wait...</p>
+ </ngx-spinner>
     <div class="row justify-content-center">
        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto ">
-          <div class="ver_mas text-center">
-             <span  class="lnr lnr-eye" (click)="details('dl')"></span>
-          </div>
+         <div (click)="details('dl')">
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
+         </div>
           <article class="text-left">
              <h2>Digital<br>Learning</h2>
              <h4>Training on Computer literacy and familiar with digital communication platform.</h4>
@@ -13,9 +23,11 @@
           <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
        </div>
        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-          <div class="ver_mas text-center">
-             <span id="click"   class="lnr lnr-eye" (click)="details('ureport')"></span>
-          </div>
+         <div (click)="details('ureport')">
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
+         </div>
           <article class="text-left">
              <h2>U<br>Reporting</h2>
              <h4>Adolescent have access to participate in polling using offline and online mechanisms.</h4>
@@ -24,8 +36,10 @@
           <img src="https://pbs.twimg.com/profile_images/781518570018648065/HcvZhTVn_400x400.jpg" alt="">
        </div>
        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-         <div class="ver_mas text-center">
-            <span class="lnr lnr-eye" (click)="details('siw')" ></span>
+         <div (click)="details('siw')">
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
          </div>
          <article class="text-left">
             <h2>Social Innovation<br>Workshop.</h2>
@@ -35,8 +49,10 @@
          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-         <div class="ver_mas text-center">
-            <span class="lnr lnr-eye" (click)="details('cbcpc')"></span>
+         <div (click)="details('cbcpc')">
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
          </div>
          <article class="text-left">
             <h2>Community Based Child<br>Protection Committee(CBCPC).</h2>
@@ -46,8 +62,10 @@
          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-         <div class="ver_mas text-center">
-            <span class="lnr lnr-eye" (click)="details('idesw')"></span>
+         <div (click)="details('idesw')">
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
          </div>
          <article class="text-left">
             <h2>Intergenerational Dialogue and<br>Experience Sharing Workshop.</h2>
@@ -57,9 +75,11 @@
          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-         <div class="ver_mas text-center">
-            <span class="lnr lnr-eye" (click)="details('lt')"></span> 
+         <div (click)="details('lt')">
+         <div class="ver_mas text-center" >
+            <span class="lnr lnr-eye" ></span> 
          </div>
+      </div>
          <article class="text-left">
             <h2>Leadership<br>Training.</h2>
             <h4>Encouraging social innovation to boost community mobilization.</h4>
@@ -68,8 +88,10 @@
          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-         <div class="ver_mas text-center">
-            <span class="lnr lnr-eye" (click)="details('sca')"></span>
+         <div (click)="details('sca')">
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
          </div>
          <article class="text-left">
             <h2>Social Change<br>Agents.</h2>
@@ -79,10 +101,12 @@
          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-         <div class="ver_mas text-center">
-            <span class="lnr lnr-eye" (click)="details('pss')"></span> 
+         <div (click)="details('pss')">
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
          </div>
-         <article class="text-left">
+          <article class="text-left">
             <h2>Psychosocial Support to<br>Adolescents.</h2>
             <h4>Encouraging social innovation to boost community mobilization.</h4>
             <h4>(Click on the eye button for more pictures.)</h4>
@@ -90,8 +114,10 @@
          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-         <div class="ver_mas text-center">
-            <span class="lnr lnr-eye" (click)="details('sda')"></span>
+         <div (click)="details('sda')">
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
          </div>
          <article class="text-left">
             <h2>Storytelling<br>Drama and Art.</h2>
@@ -101,8 +127,10 @@
          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-         <div class="ver_mas text-center">
-            <span class="lnr lnr-eye" (click)="details('tdpb')"></span>
+         <div (click)="details('tdpb')">
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
          </div>
          <article class="text-left">
             <h2>Theatre/Drama for<br>Peace Building.</h2>
@@ -112,8 +140,10 @@
          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-         <div class="ver_mas text-center">
-            <span class="lnr lnr-eye" (click)="details('pct')"></span>
+         <div (click)="details('pct')"> 
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
          </div>
          <article class="text-left">
             <h2>Parental Care<br>Tips.</h2>
@@ -123,10 +153,12 @@
          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-         <div class="ver_mas text-center">
-            <span class="lnr lnr-eye" (click)="details('cym')"></span>
+         <div (click)="details('cym')">
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
          </div>
-         <article class="text-left" (click)="details('cym')" >
+         <article class="text-left">
             <h2>Court Yard<br>Meeting</h2>
             <h4>Awareness and capacity building on peace building and engaging positively and parents and communities.</h4>
             <h4>(Click on the eye button for more pictures.)</h4>
@@ -134,8 +166,10 @@
          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-         <div class="ver_mas text-center">
-            <span class="lnr lnr-eye" (click)="details('ca')"></span>
+         <div (click)="details('ca')">
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
          </div>
          <article class="text-left">
             <h2>Club<br>Activity</h2>
@@ -145,8 +179,10 @@
          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-         <div class="ver_mas text-center">
-            <span class="lnr lnr-eye" (click)="details('asrh')"></span>
+         <div (click)="details('asrh')">
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
          </div>
          <article class="text-left">
             <h2>ASRH session<br>With Adolescents.</h2>
@@ -156,8 +192,10 @@
          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-         <div class="ver_mas text-center">
-            <span class="lnr lnr-eye" (click)="details('cd')"></span>
+         <div (click)="details('cd')">
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
          </div>
          <article class="text-left">
             <h2>Celebration<br>Days.</h2>
@@ -167,8 +205,10 @@
          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-         <div class="ver_mas text-center">
-            <span class="lnr lnr-eye" (click)="details('scswa')"></span>
+         <div (click)="details('scswa')">
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
          </div>
          <article class="text-left">
             <h2>Social Cohesion<br>Session with Adolescents.</h2>
@@ -178,8 +218,10 @@
          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-         <div class="ver_mas text-center">
-            <span class="lnr lnr-eye" (click)="details('cc')"></span>
+         <div (click)="details('cc')"> 
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
          </div>
          <article class="text-left">
             <h2>Creative<br>Competition.</h2>
@@ -189,8 +231,10 @@
          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
-         <div class="ver_mas text-center">
-            <span class="lnr lnr-eye" (click)="details('vp')"></span>
+         <div (click)="details('vp')">
+            <div class="ver_mas text-center" >
+               <span class="lnr lnr-eye" ></span> 
+            </div>
          </div>
          <article class="text-left">
             <h2>Visitor<br>Pictures.</h2> 
